@@ -410,7 +410,46 @@ internal class ConfigWindow : Window
         IndentedTextColored(this.shadedColor, "Remember the last panel visited on the scrip exchange window.");
 
         #endregion
+        #region DKTCheckSkip
+        var dktCheckSkip = Service.Configuration.DKTCheckSkip;
+        if (ImGui.Checkbox("DKTCheckSkip", ref dktCheckSkip))
+        {
+            Service.Configuration.DKTCheckSkip = dktCheckSkip;
+            Service.Configuration.Save();
+        }
 
+        IndentedTextColored(this.shadedColor, "Press Select World on datacenter travel information window.");
+        #endregion
+        #region Voyage Results
+        var voyageLogRedeploy = Service.Configuration.VoyageLogRedeployEnabled;
+        if (ImGui.Checkbox("VoyageLogRedeploy", ref voyageLogRedeploy))
+        {
+            Service.Configuration.VoyageLogRedeployEnabled = voyageLogRedeploy;
+            Service.Configuration.Save();
+        }
+
+        IndentedTextColored(this.shadedColor, "Press Redeploy on the Voyage results window.");
+        #endregion
+        #region Voyage Details
+        var voyageDetailsDeploy = Service.Configuration.VoyageDetailsDeployEnabled;
+        if (ImGui.Checkbox("VoyageDetailsDeploy", ref voyageDetailsDeploy))
+        {
+            Service.Configuration.VoyageDetailsDeployEnabled = voyageDetailsDeploy;
+            Service.Configuration.Save();
+        }
+
+        IndentedTextColored(this.shadedColor, "Press Deploy on the Voyage Details window.");
+        #endregion
+        #region Skip Quick Synthesis
+        var skipQuickSynth = Service.Configuration.QuickSynthesisMaxEnabled;
+        if (ImGui.Checkbox("QuickSynthesisMax", ref skipQuickSynth))
+        {
+            Service.Configuration.QuickSynthesisMaxEnabled = skipQuickSynth;
+            Service.Configuration.Save();
+        }
+
+        IndentedTextColored(this.shadedColor, "Press Synthesize and set the amount to maximum on the quick synthesis window.");
+        #endregion
         ImGui.PopID();
 
         ImGui.EndTabItem();

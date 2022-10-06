@@ -94,6 +94,41 @@ internal partial class YesAlreadyConfiguration : IPluginConfiguration
     public bool GrandCompanySupplyReward { get; set; } = false;
 
     /// <summary>
+    /// Gets or sets a value indicating whether the quick synthesis maximum amount setting is enabled.
+    /// </summary>
+    public bool QuickSynthesisMaxEnabled { get; set; } = false;
+
+    /// <summary>
+    /// Gets or sets a value indicating whether the quick synthesis window auto closing setting is enabled.
+    /// </summary>
+    public bool QuickSynthesisCloseWhenDoneEnabled { get; set; } = false;
+
+    /// <summary>
+    /// Gets or sets a value indicating whether the voyage details deploy setting is enabled.
+    /// </summary>
+    public bool VoyageDetailsDeployEnabled { get; set; } = false;
+
+    /// <summary>
+    /// Gets or sets a value indicating whether the voyage log redeploy setting is enabled.
+    /// </summary>
+    public bool VoyageLogRedeployEnabled { get; set; } = false;
+
+    /// <summary>
+    /// Gets or sets a value indicating whether the grand company supply reward dialog setting is enabled.
+    /// </summary>
+    public bool DataCenterTravel { get; set; } = false;
+
+    /// <summary>
+    /// Gets or sets a value indicating whether the home data center return confirm dialog setting is enabled.
+    /// </summary>
+    public bool DKTCheckSkip { get; set; } = false;
+
+    /// <summary>
+    /// Gets or sets a value indicating whether the home data center return execution dialog setting is enabled.
+    /// </summary>
+    public bool HomeDataCenterReturnExecute { get; set; } = false;
+
+    /// <summary>
     /// Gets or sets a value indicating whether the shop card dialog setting is enabled.
     /// </summary>
     public bool ShopCardDialog { get; set; } = false;
