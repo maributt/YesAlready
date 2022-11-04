@@ -3,4 +3,4 @@
 	url = https://github.com/daemitus/FFXIVClientStructs.git
 [submodule "lib/ClickLib"]
 	path = lib/ClickLib
-	url = https://github.com/daemitus/ClickLib.git
+	url = https://github.com/maributt/ClickLib.git
