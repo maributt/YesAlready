@@ -450,6 +450,16 @@ internal class ConfigWindow : Window
 
         IndentedTextColored(this.shadedColor, "Press Synthesize and set the amount to maximum on the quick synthesis window.");
         #endregion
+        #region Auto End Quick Synthesis
+        var autoEndQuickSynth = Service.Configuration.QuickSynthesisCloseWhenDoneEnabled;
+        if (ImGui.Checkbox("QuickSynthesisAutoEnd", ref autoEndQuickSynth))
+        {
+            Service.Configuration.QuickSynthesisCloseWhenDoneEnabled = autoEndQuickSynth;
+            Service.Configuration.Save();
+        }
+
+        IndentedTextColored(this.shadedColor, "Press \"End Synthesis\" on the quick synthesis window when available.");
+        #endregion
         ImGui.PopID();
 
         ImGui.EndTabItem();
