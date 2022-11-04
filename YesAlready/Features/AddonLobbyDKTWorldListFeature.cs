@@ -11,7 +11,7 @@ namespace YesAlready.Features;
 /// <summary>
 /// AddonJournalResult feature.
 /// </summary>
-internal class AddonLobbyDKTWorldListFeature : UpdateFeature
+internal class AddonLobbyDKTWorldListFeature : OnSetupFeature
 {
     /// <summary>
     /// Initializes a new instance of the <see cref="AddonLobbyDKTWorldListFeature"/> class.
