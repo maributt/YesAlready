@@ -1,6 +1,3 @@
 [submodule "lib/ClickLib"]
 	path = lib/ClickLib
 	url = https://github.com/maributt/ClickLib.git
-[submodule "lib/FFXIVClientStructs"]
-	path = lib/FFXIVClientStructs
-	url = https://github.com/maributt/FFXIVClientStructs.git
