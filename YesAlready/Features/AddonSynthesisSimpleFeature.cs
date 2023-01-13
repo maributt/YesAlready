@@ -13,9 +13,6 @@ namespace YesAlready.Features;
 /// </summary>
 internal class AddonSynthesisSimpleFeature : UpdateFeature
 {
-    private ClickTalk? clickTalk = null;
-    private IntPtr lastTalkAddon = IntPtr.Zero;
-
     /// <summary>
     /// Initializes a new instance of the <see cref="AddonSynthesisSimpleFeature"/> class.
     /// </summary>
