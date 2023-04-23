@@ -104,6 +104,16 @@ internal partial class YesAlreadyConfiguration : IPluginConfiguration
     public bool QuickSynthesisCloseWhenDoneEnabled { get; set; } = false;
 
     /// <summary>
+    /// Gets or sets a value indicating whether the retainer item transfer progress window auto closing setting is enabled.
+    /// </summary>
+    public bool RetainerItemTransferProgressAutoClose { get; set; } = false;
+
+    /// <summary>
+    /// Gets or sets a value indicating whether the retainer item transfer list window auto confirm setting is enabled.
+    /// </summary>
+    public bool RetainerItemTransferListAutoConfirm { get; set; } = false;
+
+    /// <summary>
     /// Gets or sets a value indicating whether the voyage details deploy setting is enabled.
     /// </summary>
     public bool VoyageDetailsDeployEnabled { get; set; } = false;

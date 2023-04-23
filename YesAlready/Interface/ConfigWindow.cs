@@ -460,6 +460,26 @@ internal class ConfigWindow : Window
 
         IndentedTextColored(this.shadedColor, "Press \"End Synthesis\" on the quick synthesis window when available.");
         #endregion
+        #region Auto Confirm Retainer Item Transfer List
+        var autoConfirmRetainerTransferList = Service.Configuration.RetainerItemTransferListAutoConfirm;
+        if (ImGui.Checkbox("RetainerItemTransferListAutoConfirm", ref autoConfirmRetainerTransferList))
+        {
+            Service.Configuration.RetainerItemTransferListAutoConfirm = autoConfirmRetainerTransferList;
+            Service.Configuration.Save();
+        }
+
+        IndentedTextColored(this.shadedColor, "Press Confirm on the retainer item transfer list window.");
+        #endregion
+        #region Auto Close Retainer Item Transfer Progress
+        var autoCloseRetainerTransferProgress = Service.Configuration.RetainerItemTransferProgressAutoClose;
+        if (ImGui.Checkbox("RetainerItemTransferAutoClose", ref autoCloseRetainerTransferProgress))
+        {
+            Service.Configuration.RetainerItemTransferProgressAutoClose = autoCloseRetainerTransferProgress;
+            Service.Configuration.Save();
+        }
+
+        IndentedTextColored(this.shadedColor, "Press \"Close Window\" on the retainer item transfer progress window when available.");
+        #endregion
         ImGui.PopID();
 
         ImGui.EndTabItem();
