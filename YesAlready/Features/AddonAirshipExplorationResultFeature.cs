@@ -1,8 +1,8 @@
 ﻿using System;
+using System.Threading;
 
 using ClickLib.Clicks;
-using Dalamud.Logging;/*
-using XivCommon;*/
+using FFXIVClientStructs.FFXIV.Component.GUI;
 using YesAlready.BaseFeatures;
 
 namespace YesAlready.Features;
@@ -11,8 +11,9 @@ namespace YesAlready.Features;
 /// AddonAirshipExplorationResult feature.
 /// </summary>
 internal class AddonAirshipExplorationResultFeature : OnSetupFeature
-{/*
-    private XivCommonBase xivCommon;*/
+{
+    private static readonly uint RedeployBtnId = 27U;
+    private static readonly uint FinalizeBtnId = 28U;
 
     /// <summary>
     /// Initializes a new instance of the <see cref="AddonAirshipExplorationResultFeature"/> class.
@@ -30,6 +31,13 @@ internal class AddonAirshipExplorationResultFeature : OnSetupFeature
     {
         if (!Service.Configuration.VoyageLogRedeployEnabled)
             return;
-
+        new Thread(() =>
+        {
+            Thread.Sleep(100);
+            if (((AtkUnitBase*)addon)->GetButtonNodeById(RedeployBtnId)->IsEnabled)
+                ClickAirshipExplorationResult.Using(addon).Redeploy(((AtkUnitBase*)addon)->GetButtonNodeById(RedeployBtnId));
+            else
+                ClickAirshipExplorationResult.Using(addon).FinalizeReport(((AtkUnitBase*)addon)->GetButtonNodeById(FinalizeBtnId));
+        }).Start();
     }
 }
