@@ -12,8 +12,8 @@ namespace YesAlready.Features;
 /// </summary>
 internal class AddonAirshipExplorationResultFeature : OnSetupFeature
 {
-    private static readonly uint RedeployBtnId = 27U;
-    private static readonly uint FinalizeBtnId = 28U;
+    private static readonly uint RedeployBtnId = 47U;
+    private static readonly uint FinalizeBtnId = 48U;
 
     /// <summary>
     /// Initializes a new instance of the <see cref="AddonAirshipExplorationResultFeature"/> class.
@@ -36,8 +36,8 @@ internal class AddonAirshipExplorationResultFeature : OnSetupFeature
             Thread.Sleep(100);
             if (((AtkUnitBase*)addon)->GetButtonNodeById(RedeployBtnId)->IsEnabled)
                 ClickAirshipExplorationResult.Using(addon).Redeploy(((AtkUnitBase*)addon)->GetButtonNodeById(RedeployBtnId));
-            else
-                ClickAirshipExplorationResult.Using(addon).FinalizeReport(((AtkUnitBase*)addon)->GetButtonNodeById(FinalizeBtnId));
+            /*else
+                ClickAirshipExplorationResult.Using(addon).FinalizeReport(((AtkUnitBase*)addon)->GetButtonNodeById(FinalizeBtnId));*/
         }).Start();
     }
 }
