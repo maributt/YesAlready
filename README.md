@@ -9,4 +9,4 @@ Each type of dialog needs to be manually added, if you would like one that is no
 * Type `/pyes help` to view additional command line arguments.
 
 ## Installation
-* Add `https://github.com/daemitus/MyDalamudPlugins/raw/master/pluginmaster.json` to your list of repos in `/xlsettings`
+* Clone repo and build yourself, add a path to the built `.dll` file under the Experimental tab in `/xlsettings`! 
