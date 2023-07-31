@@ -410,16 +410,6 @@ internal class ConfigWindow : Window
         IndentedTextColored(this.shadedColor, "Remember the last panel visited on the scrip exchange window.");
 
         #endregion
-        #region DKTCheckSkip
-        var dktCheckSkip = Service.Configuration.DKTCheckSkip;
-        if (ImGui.Checkbox("DKTCheckSkip", ref dktCheckSkip))
-        {
-            Service.Configuration.DKTCheckSkip = dktCheckSkip;
-            Service.Configuration.Save();
-        }
-
-        IndentedTextColored(this.shadedColor, "Press Select World on datacenter travel information window.");
-        #endregion
         #region Voyage Results
         var voyageLogRedeploy = Service.Configuration.VoyageLogRedeployEnabled;
         if (ImGui.Checkbox("VoyageLogRedeploy", ref voyageLogRedeploy))
