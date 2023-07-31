@@ -480,6 +480,66 @@ internal class ConfigWindow : Window
 
         IndentedTextColored(this.shadedColor, "Press \"Close Window\" on the retainer item transfer progress window when available.");
         #endregion
+        #region Granary Auto Collect
+        var granaryAutoCollect = Service.Configuration.GranaryAutoCollect;
+        if (ImGui.Checkbox("GranaryAutoCollect", ref granaryAutoCollect))
+        {
+            Service.Configuration.GranaryAutoCollect = granaryAutoCollect;
+            Service.Configuration.Save();
+        }
+
+        IndentedTextColored(this.shadedColor, "Press \"Collect\" on the island sanctuaries' granaries when available.");
+        #endregion
+        #region Auto Max Exploration
+        var autoMaxExploration = Service.Configuration.AutoMaxExploration;
+        if (ImGui.Checkbox("AutoMaxExploration", ref autoMaxExploration))
+        {
+            Service.Configuration.AutoMaxExploration = autoMaxExploration;
+            Service.Configuration.Save();
+        }
+
+        IndentedTextColored(this.shadedColor, "Press \"Max\" on the island sanctuaries' granaries explorations when available.");
+        #endregion
+        #region Auto Collect All Pasture
+        var pastureAutoCollectAll = Service.Configuration.PastureAutoCollectAll;
+        if (ImGui.Checkbox("PastureAutoCollectAll", ref pastureAutoCollectAll))
+        {
+            Service.Configuration.PastureAutoCollectAll = pastureAutoCollectAll;
+            Service.Configuration.Save();
+        }
+
+        IndentedTextColored(this.shadedColor, "Press \"Collect All\" on the island sanctuaries' pasture window when available.");
+        #endregion
+        #region Auto Collect All Cropland
+        var croplandAutoCollectAll = Service.Configuration.CroplandAutoCollectAll;
+        if (ImGui.Checkbox("CroplandAutoCollectAll", ref croplandAutoCollectAll))
+        {
+            Service.Configuration.CroplandAutoCollectAll = croplandAutoCollectAll;
+            Service.Configuration.Save();
+        }
+
+        IndentedTextColored(this.shadedColor, "Press \"Collect All\" on the island sanctuaries' cropland window when available.");
+        #endregion
+        #region Auto Purchase Random Jumbo Cactpot Ticket
+        var lotteryWeeklyInputAuto = Service.Configuration.LotteryWeeklyInputAuto;
+        if (ImGui.Checkbox("LotteryWeeklyInputAuto", ref lotteryWeeklyInputAuto))
+        {
+            Service.Configuration.LotteryWeeklyInputAuto = lotteryWeeklyInputAuto;
+            Service.Configuration.Save();
+        }
+
+        IndentedTextColored(this.shadedColor, "Automatically purchase a random number ticket from the Jumbo Cactpot purchase addon.");
+        #endregion
+        #region Auto Close Jumbo Cactpot Reward Menu
+        var lotteryWeeklyRewardListAutoClose = Service.Configuration.LotteryWeeklyRewardListAutoClose;
+        if (ImGui.Checkbox("LotteryWeeklyRewardListAutoClose", ref lotteryWeeklyRewardListAutoClose))
+        {
+            Service.Configuration.LotteryWeeklyRewardListAutoClose = lotteryWeeklyRewardListAutoClose;
+            Service.Configuration.Save();
+        }
+
+        IndentedTextColored(this.shadedColor, "Automatically close the Jumbo Cactpot results window.");
+        #endregion
         ImGui.PopID();
 
         ImGui.EndTabItem();

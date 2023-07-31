@@ -109,6 +109,26 @@ internal partial class YesAlreadyConfiguration : IPluginConfiguration
     public bool RetainerItemTransferProgressAutoClose { get; set; } = false;
 
     /// <summary>
+    /// Gets or sets a value indicating whether... lazy.
+    /// </summary>
+    public bool GranaryAutoCollect { get; set; } = false;
+
+    /// <summary>
+    /// Gets or sets a value indicating whether... lazy.
+    /// </summary>
+    public bool CroplandAutoCollectAll { get; set; } = false;
+
+    /// <summary>
+    /// Gets or sets a value indicating whether... lazy.
+    /// </summary>
+    public bool PastureAutoCollectAll { get; set; } = false;
+
+    /// <summary>
+    /// Gets or sets a value indicating whether... lazy.
+    /// </summary>
+    public bool AutoMaxExploration { get; set; } = false;
+
+    /// <summary>
     /// Gets or sets a value indicating whether the retainer item transfer list window auto confirm setting is enabled.
     /// </summary>
     public bool RetainerItemTransferListAutoConfirm { get; set; } = false;
@@ -172,6 +192,16 @@ internal partial class YesAlreadyConfiguration : IPluginConfiguration
     /// Gets or sets the second AtkValue for the inclusion shop subcategory change event.
     /// </summary>
     public uint InclusionShopRememberSubcategory { get; set; } = 0;
+
+    /// <summary>
+    /// Gets or sets a value indicating whether the Jumbo Cactpot auto random number purchase setting is enabled.
+    /// </summary>
+    public bool LotteryWeeklyInputAuto { get; set; } = false;
+
+    /// <summary>
+    /// Gets or sets a value indicating whether the Jumbo Cactpot reward list auto close setting is enabled.
+    /// </summary>
+    public bool LotteryWeeklyRewardListAutoClose { get; set; } = false;
 
     /// <summary>
     /// Loads the configuration.
