@@ -530,6 +530,16 @@ internal class ConfigWindow : Window
 
         IndentedTextColored(this.shadedColor, "Automatically close the Jumbo Cactpot results window.");
         #endregion
+        #region Auto Repair Submarine Parts
+        var companyCraftSupplyAutoRepair = Service.Configuration.CompanyCraftSupplyAutoRepair;
+        if (ImGui.Checkbox("CompanyCraftSupplyAutoRepair", ref companyCraftSupplyAutoRepair))
+        {
+            Service.Configuration.CompanyCraftSupplyAutoRepair = companyCraftSupplyAutoRepair;
+            Service.Configuration.Save();
+        }
+
+        IndentedTextColored(this.shadedColor, "Automatically repair submarine parts (if broken) when opening the repair parts menu.");
+        #endregion
         ImGui.PopID();
 
         ImGui.EndTabItem();

@@ -174,6 +174,11 @@ internal partial class YesAlreadyConfiguration : IPluginConfiguration
     public bool ContentsFinderConfirmEnabled { get; set; } = false;
 
     /// <summary>
+    /// Gets or sets a value indicating whether the submarine parts auto-repair upon opening the repair menu setting is enabled.
+    /// </summary>
+    public bool CompanyCraftSupplyAutoRepair { get; set; } = false;
+
+    /// <summary>
     /// Gets or sets a value indicating whether the duty finder one-time accept setting is enabled.
     /// </summary>
     public bool ContentsFinderOneTimeConfirmEnabled { get; set; } = false;
